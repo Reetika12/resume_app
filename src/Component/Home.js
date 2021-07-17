@@ -13,10 +13,8 @@ function Home()
             {/* <Navbar/> */}
              <div className="container">
                 <CommonStyle >
-                    <div >
-                    <Profile/>
-                    </div>
                     <div>
+                       <Profile/>
                         <Aboutme/>
                         <Skills/>
                         <Experience/>
