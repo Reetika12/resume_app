@@ -26,7 +26,6 @@ const Parent= styled.div`
 const ParentComp = styled.div`
   background: #ffffff;
   z-index: 100;
-//   width: 40%;
 `;
 const Imgcomp = styled.img`
   z-index: 1;
@@ -36,7 +35,6 @@ const Imgcomp = styled.img`
   border-radius: 12px;
 `;
 const Textalign = styled.span`
-  // margin-left:${(props) => (props.alignless ? "10%" : "15%")};
   font-size: 20px;
 `;
 const AlignTitle = styled.div`

@@ -22,13 +22,7 @@ function Footer() {
             "subheader1":"Designed by",
             "subheader2":"skills",
             "subheader3":"Designed by"
-        },
-        {
-            "header":"marketing tips twice a month",
-            "subheader1":"Designed by",
-            "subheader2":"skills",
-            "subheader3":"Designed by"
-        },
+        }
 
     ]
   return (

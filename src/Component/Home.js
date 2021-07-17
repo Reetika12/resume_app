@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components';
 
 import Skills from "./Skills"
@@ -10,7 +10,6 @@ function Home()
 {
     return(
         <section>
-            {/* <Navbar/> */}
              <div className="container">
                 <CommonStyle >
                     <div>

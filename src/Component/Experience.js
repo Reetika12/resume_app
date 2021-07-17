@@ -2,9 +2,8 @@ import React,{useState,useEffect} from 'react'
 
 function Experience() {
     const [data,setData] = useState([])
-    
+
     useEffect(()=>{
-        console.log("callll")
      fetch('https://baconipsum.com/api/?type=all-meat&paras=2&start-with-lorem=1').then((res)=>res.json()).then((data)=>setData(data))
     },[])
 
@@ -43,7 +42,6 @@ function Experience() {
                                 <strong>Software Developer</strong>
                             </h6>
                             {data ? data[0] : ""}
-                            {/* <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p> */}
                         </blockquote>
                     </div>
                 </div>

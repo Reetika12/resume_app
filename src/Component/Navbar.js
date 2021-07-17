@@ -1,17 +1,13 @@
-import React,{useState} from "react"
+import React from "react"
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom'
 import HomeIcon from '@material-ui/icons/Home';
 import CastForEducationIcon from '@material-ui/icons/CastForEducation';
 import LocalMallIcon from '@material-ui/icons/LocalMall';
 import KeyboardCapslockIcon from '@material-ui/icons/KeyboardCapslock';
-// import "../Style/Header.css"
 
 function Navbar()
 {
-    // const [active ,setactive] = useState(true)
-    // let {id} = useParams()
-    // console.log("params",id)
     return(
         <ParentComp>
             <StyledNavLink activeClassName="active" to="/">
