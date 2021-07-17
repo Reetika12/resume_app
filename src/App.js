@@ -9,6 +9,7 @@ import Experience from "./Component/Experience"
 import Education from "./Component/Education"
 import Profile from "./Component/Profile"
 import Navbar from "./Component/Navbar"
+import Footer from "./Component/Footer"
 // import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/experience" component={Experience}/>
           <Route exact path="/profile" component={Profile}/>
         </Switch>
+        <Footer/>
     </Router>
   );
 }
