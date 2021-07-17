@@ -1,19 +1,22 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
+
 function Aboutme() {
+    const [data,setData] = useState([])
+
+useEffect(()=>{
+    console.log("callll")
+ fetch('https://baconipsum.com/api/?type=all-meat&paras=2&start-with-lorem=1').then((res)=>res.json()).then((data)=>setData(data))
+},[])
   return (
     <div className="card">
       <div className="card-content">
         <h6 className="mt-bottom">
           <strong>About me</strong>
         </h6>
+        {console.log("dtaaaa",data)}
         <p className="grey-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          {data ? data[0] : ""
+          }
         </p>
         <div className="card-action">
           <strong>Personal Info</strong>

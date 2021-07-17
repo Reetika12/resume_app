@@ -1,6 +1,13 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 
 function Experience() {
+    const [data,setData] = useState([])
+    
+    useEffect(()=>{
+        console.log("callll")
+     fetch('https://baconipsum.com/api/?type=all-meat&paras=2&start-with-lorem=1').then((res)=>res.json()).then((data)=>setData(data))
+    },[])
+
     return (
         <div className="card">
             <div className="card-content">
@@ -18,7 +25,7 @@ function Experience() {
                             <h6 className="no-pad mt-bottom">
                                 <strong>Software Developer</strong>
                             </h6>
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+                            {data ? data[0] : ""}
                         </blockquote>
                     </div>
                 </div>
@@ -35,7 +42,8 @@ function Experience() {
                             <h6 className="no-pad mt-bottom">
                                 <strong>Software Developer</strong>
                             </h6>
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+                            {data ? data[0] : ""}
+                            {/* <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p> */}
                         </blockquote>
                     </div>
                 </div>
