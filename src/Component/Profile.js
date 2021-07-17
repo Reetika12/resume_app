@@ -1,44 +1,45 @@
-import React from 'react'
-import mypic from "../Img/mypic.jpg"
-import styled from 'styled-components';
+import React from "react";
+import mypic from "../Img/mypic.jpg";
+import styled from "styled-components";
 
 function Profile() {
-    return (
-        <div>
-            {/* <div> */}
-                    <ParentComp >
-                        <Imgcomp className="activator" src={mypic} alt="reetika"/>
-                    </ParentComp>
-                    <AlignTitle>
-                        <Textalign >Reetika</Textalign>
-                        <Textalign alignless>Software Developer</Textalign>
-                    </AlignTitle>   
-            {/* </div> */}
-        </div>
-    )
+  return (
+    <Parent>
+      <ParentComp>
+        <Imgcomp className="activator" src={mypic} alt="reetika" />
+      </ParentComp>
+      <AlignTitle>
+        <Textalign>Reetika</Textalign>
+        <Textalign alignless>Software Developer</Textalign>
+      </AlignTitle>
+    </Parent>
+  );
 }
 
-export default Profile
+export default Profile;
 
-const ParentComp=styled.div`
-background:#ffffff;
-z-index: 100;
-width:40%;
+const Parent= styled.div`
+ display:flex;
+ align-items:center;
+ justify-content:center;
 `
-const Imgcomp=styled.img`
-z-index:1;
-width: 206px;
-margin-right: 20px;
-margin-top:20%;
-border-radius: 12px;
-
-`
-const Textalign=styled.span`
-// margin-left:${props => props.alignless ? "10%":"15%"};
-font-size: 20px;
-`
+const ParentComp = styled.div`
+  background: #ffffff;
+  z-index: 100;
+//   width: 40%;
+`;
+const Imgcomp = styled.img`
+  z-index: 1;
+  width: 206px;
+  margin-right: 20px;
+  margin-top: 20%;
+  border-radius: 12px;
+`;
+const Textalign = styled.span`
+  // margin-left:${(props) => (props.alignless ? "10%" : "15%")};
+  font-size: 20px;
+`;
 const AlignTitle = styled.div`
-display:flex;
-flex-direction:column;
-
-`
+  display: flex;
+  flex-direction: column;
+`;
